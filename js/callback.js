@@ -136,3 +136,83 @@
 // // Відбулася мутація вихідних даних - масиву numbers
 // console.log(numbers); // [2, 4, 6, 8, 10]
 // Функція dirtyMultiply(array, value) множить кожен елемент масиву array на число value. Вона змінює (мутує) вихідний масив за посиланням.
+ 
+//------------------------------------------
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// // Мутація вихідних даних не відбулася
+// console.log(numbers); // [1, 2, 3, 4, 5]
+// // Функція повернула новий масив зі зміненими даними
+// console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+//-------------------------------------
+
+
+//Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює кожен елемент, значення якого - це парне число, додаючи до нього значення параметра value, який точно є числом.
+
+//Виконай рефакторинг функції таким чином, щоб вона стала чистою - не змінювала масив чисел numbers, а створювала, наповнювала і повертала новий масив з оновленими значеннями.
+
+// function changeEven(numbers, value) {
+//   const newArray = [];
+
+//   numbers.forEach(element => {
+//     if (element % 2 === 0) {
+//       newArray.push(element + value);
+//     } else {
+//       newArray.push(element);
+//       }
+//   });
+    
+//     return newArray;
+
+// };
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10)); // [1, 12, 3, 14, 5]
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); // [12, 18, 3, 7, 14, 16]
+// console.log(changeEven([17, 24, 68, 31, 42], 100)); // [17, 124, 168, 31, 142]
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); // [144, 13, 81, 192, 136, 154]
+
+//-----------------------------------------------------------------
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+// const planetsInUpperCase = planets.map(planet => planet.toUpperCase());
+// console.log(planetsInUpperCase); // ["EARTH", "MARS", "VENUS", "JUPITER"]
+
+// const planetsInLowerCase = planets.map(planet => planet.toLowerCase());
+// console.log(planetsInLowerCase); // ["earth", "mars", "venus", "jupiter"]
+
+// // Оригінальний масив не змінився
+// console.log(planets); // ["Earth", "Mars", "Venus", "Jupiter"]
+
+//-------------------
+// В масиві planets зберігаються назви планет.Доповни код таким чином, щоб у змінній planetsLengths вийшов масив, що буде складатися з довжин назв кожної планети з масиву planets.Обов'язково використовуй метод map().
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+// const planetsLengths = planets.map(planet => planet.length);
+
+//-----------------
+// const students = [
+//   { name: "Mango", score: 83 },
+//   { name: "Poly", score: 59 },
+//   { name: "Ajax", score: 37 },
+//   { name: "Kiwi", score: 94 },
+//   { name: "Houston", score: 64 },
+// ];
+
+// const names = students.map(student => student.name);
+// console.log(names); // ["Mango", "Poly", "Ajax", "Kiwi", "Houston"]
+
+//----------------------
+
