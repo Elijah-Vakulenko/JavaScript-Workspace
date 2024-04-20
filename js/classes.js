@@ -185,9 +185,11 @@
 //     operation(value);
 // };
 
-// updateCounter(10, counter.increment);
+// updateCounter(10, counter.increment); //not working
 // updateCounter(5, counter.decrement);
 
+// updateCounter(10, counter.increment.bind(counter)); //working
+// updateCounter(5, counter.decrement.bind(counter));
 
 
 //----------------------
@@ -212,22 +214,22 @@
 
 //-----------------------------
 
-const changeColor = function (color) {
-    console.log('changeColor -> this', this);
-    this.color = color;
-};
+// const changeColor = function (color) {
+//     console.log('changeColor -> this', this);
+//     this.color = color;
+// };
 
-const hat = {
-    color: 'black',
-};
+// const hat = {
+//     color: 'black',
+// };
 
-changeColor.call(hat, 'orange');
+// changeColor.call(hat, 'orange');
 
-console.log(hat);
+// console.log(hat);
 
-const sweater = {
-    color: 'green',
-};
+// const sweater = {
+//     color: 'green',
+// };
 
 
 
@@ -235,13 +237,13 @@ const sweater = {
 // BIND
 //--------
 
-const changeHatColor = changeColor.bind(hat);
-const changeSweaterColor = changeColor.bind(sweater);
+// const changeHatColor = changeColor.bind(hat);
+// const changeSweaterColor = changeColor.bind(sweater);
 
-changeHatColor('yellow');
-console.log(hat);
+// changeHatColor('yellow');
+// console.log(hat);
 
-changeSweaterColor('red');
-console.log(sweater);
+// changeSweaterColor('red');
+// console.log(sweater);
 
 
