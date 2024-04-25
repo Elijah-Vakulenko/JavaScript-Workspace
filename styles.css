@@ -1,0 +1,20 @@
+body {
+  color: #fff;
+}
+
+.block {
+  background-color: brown;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.fb {
+  display: flex;
+  gap: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
